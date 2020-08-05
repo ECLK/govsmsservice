@@ -20,4 +20,4 @@ COPY  --from=build /usr/src/target/bin/service.jar /usr/src/target/service.jar
 WORKDIR /usr/src/target/
 RUN ls -l
 EXPOSE 9090
-CMD java -jar service.jar --eclk.govsms.username=SMSUSERNAME --eclk.govsms.password=SMSPASSWORD --eclk.govsms.source=SMSSOURCE
+CMD java -jar service.jar --eclk.govsms.username=$SMSUSERNAME --eclk.govsms.password=$SMSPASSWORD --eclk.govsms.source=$SMSSOURCE
